@@ -18,10 +18,12 @@ $ yarn add onesignal-api-client-nest
 ```typescript
 // Inside of your module imports
 @Module({
-  imports: [OneSignalModule.forRoot({
-    appId: 'appId',
-    restApiKey: 'restApiKey',
-  })]
+  imports: [
+    OneSignalModule.forRoot({
+      appId: 'appId',
+      restApiKey: 'restApiKey',
+    })
+  ]
 })
 
 // Or async
@@ -29,12 +31,13 @@ $ yarn add onesignal-api-client-nest
   imports: [
     OneSignalModule.forRootAsync({
       useFactory: async (configService: ConfigService) => {
-        return { 
+        return {
           appId: configService.get('ONESIGNAL_APP_ID'),
           restApiKey: configService.get('ONESIGNAL_REST_API_KEY'),
         };
-      inject: [ConfigService]
-    })
+      },
+      inject: [ConfigService],
+    ),
   ],
 })
 ```
@@ -62,7 +65,7 @@ export class MyService {
          .setContents({ en: message })
          .build();
       
-    await client.createNotification(input);
+    await this.oneSignalService.createNotification(input);
   }
 }
 ```
