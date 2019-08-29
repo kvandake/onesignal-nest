@@ -1,6 +1,6 @@
 {
   "name": "onesignal-api-client-nest",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "OneSignal API wrapper for the Server Rest API made to work with the Nest framework.",
   "author": {
     "email": "kvandake@gmail.com",

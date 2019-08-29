@@ -1,4 +1,5 @@
 # OneSignal API Client for NestJS
+[![npm version](https://badge.fury.io/js/onesignal-api-client-nest.svg)](https://badge.fury.io/js/onesignal-api-client-nest)
 
 OneSignal API wrapper for the Server Rest API made to work with the [Nest]((https://github.com/nestjs/nest)) framework.
 
