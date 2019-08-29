@@ -5,11 +5,7 @@ import { IOneSignalModuleOptions } from './interfaces';
 
 @Injectable()
 export class OneSignalService extends OneSignalAppClient {
-
-  constructor(
-    @Inject(ONESIGNAL_MODULE_OPTIONS) private readonly options: IOneSignalModuleOptions,
-  ) {
+  constructor(@Inject(ONESIGNAL_MODULE_OPTIONS) private readonly options: IOneSignalModuleOptions) {
     super(options.appId, options.restApiKey);
   }
-
 }

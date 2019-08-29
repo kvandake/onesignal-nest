@@ -6,17 +6,12 @@ export interface IOneSignalModuleOptions {
 }
 
 export interface IOneSignalOptionsFactory {
-  createOneSignalOptions():
-    | Promise<IOneSignalModuleOptions>
-    | IOneSignalModuleOptions;
+  createOneSignalOptions(): Promise<IOneSignalModuleOptions> | IOneSignalModuleOptions;
 }
 
-export interface IOneSignalModuleAsyncOptions
-  extends Pick<ModuleMetadata, 'imports'> {
+export interface IOneSignalModuleAsyncOptions extends Pick<ModuleMetadata, 'imports'> {
   useExisting?: Type<IOneSignalOptionsFactory>;
   useClass?: Type<IOneSignalOptionsFactory>;
-  useFactory?: (
-    ...args: any[]
-  ) => Promise<IOneSignalModuleOptions> | IOneSignalModuleOptions;
+  useFactory?: (...args: any[]) => Promise<IOneSignalModuleOptions> | IOneSignalModuleOptions;
   inject?: any[];
 }

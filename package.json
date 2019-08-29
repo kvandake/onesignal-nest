@@ -1,14 +1,17 @@
 {
   "name": "onesignal-api-client-nest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OneSignal API wrapper for the Server Rest API made to work with the Nest framework.",
-  "author": "kvandake",
+  "author": {
+    "email": "kvandake@gmail.com",
+    "name": "kvandake"
+  },
   "license": "MIT",
   "keywords": [
-    "OneSignal",
-    "Typescript",
-    "Nest",
-    "NodeJS"
+    "onesignal",
+    "typescript",
+    "nest",
+    "nestjs"
   ],
   "repository": {
     "type": "git",

@@ -1,1 +1,1 @@
-export * from './oneSignal.module.options'
+export * from './oneSignal.module.options';

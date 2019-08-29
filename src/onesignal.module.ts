@@ -24,14 +24,13 @@ export class OneSignalModule {
     };
   }
 
-  private static createAsyncProvider(
-    options: IOneSignalModuleAsyncOptions,
-  ): Provider[] {
+  private static createAsyncProvider(options: IOneSignalModuleAsyncOptions): Provider[] {
     if (options.useExisting || options.useFactory) {
       return [this.createAsyncOptionsProvider(options)];
     }
     return [
-      this.createAsyncOptionsProvider(options), {
+      this.createAsyncOptionsProvider(options),
+      {
         provide: options.useClass,
         useClass: options.useClass,
       },
@@ -48,8 +47,7 @@ export class OneSignalModule {
     }
     return {
       provide: ONESIGNAL_MODULE_OPTIONS,
-      useFactory: async (optionsFactory: IOneSignalOptionsFactory) =>
-        await optionsFactory.createOneSignalOptions(),
+      useFactory: async (optionsFactory: IOneSignalOptionsFactory) => await optionsFactory.createOneSignalOptions(),
       inject: [options.useExisting || options.useClass],
     } as any;
   }

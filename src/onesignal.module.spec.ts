@@ -21,9 +21,7 @@ class OneSignalConfigService implements IOneSignalOptionsFactory {
   providers: [OneSignalConfigService],
   exports: [OneSignalConfigService],
 })
-class OneSignalConfigModule {
-
-}
+class OneSignalConfigModule {}
 
 describe('OneSignalModule', () => {
   describe('forRoot', () => {
