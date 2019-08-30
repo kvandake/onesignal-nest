@@ -48,7 +48,7 @@ $ yarn add onesignal-api-client-nest
 In your service class you can inject the service like so and then use it in any function as you would any other service.
 
 ```typescript
-import { neSignalAppClient, NotificationBySegmentBuilder } from 'onesignal-api-client-core';
+import { NotificationBySegmentBuilder } from 'onesignal-api-client-core';
 
 @Injectable()
 export class MyService {
