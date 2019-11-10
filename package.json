@@ -1,6 +1,6 @@
 {
   "name": "onesignal-api-client-nest",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "OneSignal API wrapper for the Server Rest API made to work with the Nest framework.",
   "author": {
     "email": "kvandake@gmail.com",
@@ -36,20 +36,20 @@
   },
   "devDependencies": {
     "@nestjs/testing": "^6.6.3",
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.2",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^12.12.7",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.19.0",
+    "ts-jest": "^24.1.0",
+    "tslint": "^6.0.0-beta0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.6.2"
+    "typescript": "^3.7.2"
   },
   "dependencies": {
     "@nestjs/common": "^6.6.3",
     "@nestjs/core": "^6.6.3",
-    "onesignal-api-client-core": "^1.1.8",
+    "onesignal-api-client-core": "^1.1.12",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2"
   },
