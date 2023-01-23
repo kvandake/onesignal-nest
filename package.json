@@ -27,7 +27,7 @@
     "build": "yarn run clean && tsc",
     "test": "jest",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "eslint -c .eslintrc.json ./src/**/*.ts",
     "prepare": "yarn run build",
     "prepublishOnly": "yarn test && yarn run lint",
     "preversion": "yarn run lint",
@@ -35,23 +35,24 @@
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
-    "@nestjs/testing": "^6.6.3",
-    "@types/jest": "^24.0.22",
-    "@types/node": "^12.12.7",
-    "jest": "^24.9.0",
-    "prettier": "^1.19.1",
-    "rimraf": "^3.0.0",
-    "ts-jest": "^24.1.0",
-    "tslint": "^6.0.0-beta0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.7.2"
+    "@nestjs/testing": "^9.2.1",
+    "@types/jest": "^29.2.6",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "jest": "^29.3.1",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.1.1",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@nestjs/common": "^6.6.3",
-    "@nestjs/core": "^6.6.3",
-    "onesignal-api-client-core": "^1.1.12",
+    "@nestjs/common": "^9.2.1",
+    "@nestjs/core": "^9.2.1",
+    "onesignal-api-client-core": "^1.2.2",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.2"
+    "rxjs": "^7.8.0"
   },
   "files": [
     "lib/**/*"
