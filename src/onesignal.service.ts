@@ -9,3 +9,4 @@ export class OneSignalService extends OneSignalAppClient {
     super(options.appId, options.restApiKey);
   }
 }
+// hello
